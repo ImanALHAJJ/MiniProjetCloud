@@ -7,7 +7,6 @@ on:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-
     steps:
       - name: Print trigger
         run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -31,4 +30,6 @@ jobs:
         run: ls -la "${{ github.workspace }}"
 
       - name: Print job status
-        run: echo "🍏 Job status: ${{ job.status }}"
+        run: echo "🍏 Job status:$STATUS"
+        env:
+          STATUS: ${{ job.status }}
