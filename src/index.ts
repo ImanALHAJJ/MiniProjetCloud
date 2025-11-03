@@ -10,6 +10,7 @@ export const handleRoot = (res: ServerResponse): void => {
 
 export const handleInfo = async (res: ServerResponse): Promise<void> => {
   try {
+    
     const cpuInfo = await si.cpu();
     const memInfo = await si.mem();
     const osInfo = await si.osInfo();
